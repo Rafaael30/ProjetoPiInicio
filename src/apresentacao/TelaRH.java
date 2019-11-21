@@ -5,7 +5,11 @@
  */
 package apresentacao;
 
-import main.Main;
+import Model.Curso;
+import Model.Main;
+import java.sql.SQLException;
+import java.util.List;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -18,9 +22,21 @@ public class TelaRH extends javax.swing.JFrame {
     /**
      * Creates new form TelaCadastrarCursoSecretaria
      */
-    public TelaRH(Main oMain) {
+    public TelaRH(Main oMain) throws SQLException {
         initComponents();
         this.oMain = oMain; 
+        this.oMain = oMain;
+        List<Curso> cursos ;
+        cursos = this.oMain.ListaCurso();
+        int i =0;
+        jComboBox1_Cursos.removeAllItems();
+        while (i < cursos.size()){
+         
+         jComboBox1_Cursos.addItem(cursos.get(i).getDescricao());
+            
+        i++;
+        }
+        
     }
     
     /**
@@ -47,16 +63,16 @@ public class TelaRH extends javax.swing.JFrame {
         jLabel2_Endereco = new javax.swing.JLabel();
         jLabel3_Telefone = new javax.swing.JLabel();
         jLabel4_TitulacaoMaxima = new javax.swing.JLabel();
-        jTextField1_Nome = new javax.swing.JTextField();
-        jTextField2_Endereco = new javax.swing.JTextField();
-        jTextField3_Telefone = new javax.swing.JTextField();
+        jTextField2_Nome = new javax.swing.JTextField();
+        jTextField1_Endereço = new javax.swing.JTextField();
+        jTextField1_Telefone = new javax.swing.JTextField();
         jTextField4_TitulacaoMaxima = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6_Cidade = new javax.swing.JLabel();
-        jTextField5_Cidade = new javax.swing.JTextField();
+        jTextField1_Cidade = new javax.swing.JTextField();
         jLabel6_UF = new javax.swing.JLabel();
-        jTextField5_Estado = new javax.swing.JTextField();
+        jTextField1_UF = new javax.swing.JTextField();
         jComboBox1_Cursos = new javax.swing.JComboBox<String>();
         jButton2_Alterar = new javax.swing.JButton();
         jLabel1_ID = new javax.swing.JLabel();
@@ -64,6 +80,10 @@ public class TelaRH extends javax.swing.JFrame {
         jLabel1_Status = new javax.swing.JLabel();
         jRadioButton1_Ativo = new javax.swing.JRadioButton();
         jRadioButton2_Inativo = new javax.swing.JRadioButton();
+        jTextField1_CPF = new javax.swing.JTextField();
+        jTextField1_RG = new javax.swing.JTextField();
+        jLabel1_Nome1 = new javax.swing.JLabel();
+        jLabel1_Nome2 = new javax.swing.JLabel();
         jButton2_Sair = new javax.swing.JButton();
         jLabel1_Fundo = new javax.swing.JLabel();
 
@@ -94,8 +114,19 @@ public class TelaRH extends javax.swing.JFrame {
         jLabel4_TitulacaoMaxima.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel4_TitulacaoMaxima.setText("Titulação Maxima: ");
 
+        jTextField1_Telefone.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1_TelefoneActionPerformed(evt);
+            }
+        });
+
         jButton1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jButton1.setText("Salvar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel5.setText("Cursos:");
@@ -109,6 +140,11 @@ public class TelaRH extends javax.swing.JFrame {
         jComboBox1_Cursos.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jButton2_Alterar.setText("Alterar");
+        jButton2_Alterar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2_AlterarActionPerformed(evt);
+            }
+        });
 
         jLabel1_ID.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel1_ID.setText("ID:");
@@ -123,6 +159,12 @@ public class TelaRH extends javax.swing.JFrame {
         buttonGroup1.add(jRadioButton2_Inativo);
         jRadioButton2_Inativo.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jRadioButton2_Inativo.setText("Inativo");
+
+        jLabel1_Nome1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel1_Nome1.setText("CPF: ");
+
+        jLabel1_Nome2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel1_Nome2.setText("RG:");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -139,44 +181,64 @@ public class TelaRH extends javax.swing.JFrame {
                         .addComponent(jTextField1_ID, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(11, 11, 11))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jButton2_Alterar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel3_Telefone)
-                                .addGap(52, 52, 52)
-                                .addComponent(jTextField3_Telefone, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel2_Endereco)
-                                    .addComponent(jLabel1_Nome))
-                                .addGap(8, 8, 8)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextField1_Nome)
-                                    .addComponent(jTextField2_Endereco, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel4_TitulacaoMaxima)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField4_TitulacaoMaxima, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel6_Cidade)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField5_Cidade, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel6_UF)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField5_Estado, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jComboBox1_Cursos, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
                                 .addComponent(jRadioButton1_Ativo)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jRadioButton2_Inativo)))
-                        .addContainerGap(14, Short.MAX_VALUE))))
+                                .addComponent(jRadioButton2_Inativo)
+                                .addGap(164, 164, 164))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel1_Nome)
+                                    .addComponent(jLabel1_Nome1)
+                                    .addComponent(jLabel1_Nome2))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                            .addComponent(jTextField1_CPF, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(44, 44, 44))
+                                        .addComponent(jTextField2_Nome, javax.swing.GroupLayout.Alignment.TRAILING))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jTextField1_RG, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton1))))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel2_Endereco)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTextField1_Endereço, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jTextField1_Cidade, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel6_UF)))
+                                .addGap(21, 21, 21)))
+                        .addContainerGap())
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel4_TitulacaoMaxima)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jTextField4_TitulacaoMaxima, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jComboBox1_Cursos, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addContainerGap())
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                                    .addComponent(jLabel3_Telefone)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jTextField1_Telefone, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel2Layout.createSequentialGroup()
+                                    .addComponent(jLabel6_Cidade)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jTextField1_UF, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jButton2_Alterar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -190,41 +252,48 @@ public class TelaRH extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton1_Ativo)
                     .addComponent(jRadioButton2_Inativo))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1_Nome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextField2_Nome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1_Nome))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField2_Endereco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField1_CPF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1_Nome1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField1_RG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1_Nome2)
+                    .addComponent(jButton1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextField1_Endereço, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2_Endereco))
-                .addGap(19, 19, 19)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6_Cidade)
-                    .addComponent(jTextField5_Cidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6_UF)
-                    .addComponent(jTextField5_Estado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField3_Telefone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6_Cidade)
+                    .addComponent(jTextField1_Cidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6_UF)
+                    .addComponent(jTextField1_UF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(13, 13, 13)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField1_Telefone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3_Telefone))
-                .addGap(7, 7, 7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4_TitulacaoMaxima)
                     .addComponent(jTextField4_TitulacaoMaxima, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(25, 25, 25)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(jComboBox1_Cursos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(33, 33, 33)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2_Alterar))
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton2_Alterar)
+                .addGap(40, 40, 40))
         );
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(180, 90, 300, 350);
+        jPanel2.setBounds(180, 90, 320, 350);
 
         jButton2_Sair.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jButton2_Sair.setText("Sair");
@@ -258,6 +327,51 @@ public class TelaRH extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.dispose();
     }//GEN-LAST:event_jButton2_SairActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here: salvar
+        
+         try {
+         int id = 0;//Integer.parseInt(jTextField1_ID.getText());
+         Boolean ativo = true ;
+         String cpf = jTextField1_CPF.getText();
+         String rg = jTextField1_RG.getText();     
+         String nome = jTextField2_Nome.getText();     
+         String telefone = jTextField1_Telefone.getText();    
+         String endereco = jTextField1_Endereço.getText();
+         String cidade = jTextField1_Cidade.getText();
+         String uf = jTextField1_UF.getText();
+         Curso curso = oMain.BuscarCurso(jComboBox1_Cursos.getItemAt(jComboBox1_Cursos.getSelectedIndex()));
+         String titulacao = jTextField4_TitulacaoMaxima.getText();
+         
+        if(jRadioButton1_Ativo.isSelected()){
+            ativo = true ;
+        }
+        else if(jRadioButton2_Inativo.isSelected()){
+            ativo = false;
+        }
+         
+       oMain.SalvarProfessor(nome, cpf, rg, telefone, endereco, cidade, ativo, curso.getDescricao(), id, uf, titulacao);
+       
+       JOptionPane.showMessageDialog(null, "Professor cadastrado com sucesso");
+        } catch (Exception e) {
+            
+            JOptionPane.showMessageDialog(null, e);
+        }
+        
+        
+        // Salvar asdasdasd
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField1_TelefoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1_TelefoneActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1_TelefoneActionPerformed
+
+    private void jButton2_AlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2_AlterarActionPerformed
+        // TODO add your handling code here:
+        
+        // alterar
+    }//GEN-LAST:event_jButton2_AlterarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -303,6 +417,8 @@ public class TelaRH extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1_Fundo;
     private javax.swing.JLabel jLabel1_ID;
     private javax.swing.JLabel jLabel1_Nome;
+    private javax.swing.JLabel jLabel1_Nome1;
+    private javax.swing.JLabel jLabel1_Nome2;
     private javax.swing.JLabel jLabel1_Status;
     private javax.swing.JLabel jLabel2_Endereco;
     private javax.swing.JLabel jLabel2_Titulo;
@@ -315,12 +431,14 @@ public class TelaRH extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JRadioButton jRadioButton1_Ativo;
     private javax.swing.JRadioButton jRadioButton2_Inativo;
+    private javax.swing.JTextField jTextField1_CPF;
+    private javax.swing.JTextField jTextField1_Cidade;
+    private javax.swing.JTextField jTextField1_Endereço;
     private javax.swing.JTextField jTextField1_ID;
-    private javax.swing.JTextField jTextField1_Nome;
-    private javax.swing.JTextField jTextField2_Endereco;
-    private javax.swing.JTextField jTextField3_Telefone;
+    private javax.swing.JTextField jTextField1_RG;
+    private javax.swing.JTextField jTextField1_Telefone;
+    private javax.swing.JTextField jTextField1_UF;
+    private javax.swing.JTextField jTextField2_Nome;
     private javax.swing.JTextField jTextField4_TitulacaoMaxima;
-    private javax.swing.JTextField jTextField5_Cidade;
-    private javax.swing.JTextField jTextField5_Estado;
     // End of variables declaration//GEN-END:variables
 }
