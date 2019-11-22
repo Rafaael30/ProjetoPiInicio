@@ -34,128 +34,123 @@ public class TelaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1_Secretaria = new javax.swing.JButton();
-        jButton2_RH = new javax.swing.JButton();
-        jButton4_Aluno = new javax.swing.JButton();
-        jButton3_Professor = new javax.swing.JButton();
-        jButton5_Coordenador = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jButton1_Secretaria1 = new javax.swing.JButton();
+        jButton2_RH1 = new javax.swing.JButton();
+        jButton4_Aluno1 = new javax.swing.JButton();
+        jButton3_Professor1 = new javax.swing.JButton();
+        jButton5_Coordenador1 = new javax.swing.JButton();
+        jLabel1_Fundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1_Secretaria.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jButton1_Secretaria.setText("Secretária");
-        jButton1_Secretaria.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jButton1_Secretaria.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1_SecretariaActionPerformed(evt);
-            }
-        });
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(null);
 
-        jButton2_RH.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jButton2_RH.setText("RH");
-        jButton2_RH.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jButton2_RH.addActionListener(new java.awt.event.ActionListener() {
+        jButton1_Secretaria1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jButton1_Secretaria1.setText("Secretária");
+        jButton1_Secretaria1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jButton1_Secretaria1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2_RHActionPerformed(evt);
+                jButton1_Secretaria1ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton1_Secretaria1);
+        jButton1_Secretaria1.setBounds(110, 90, 145, 84);
 
-        jButton4_Aluno.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jButton4_Aluno.setText("Aluno");
-        jButton4_Aluno.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jButton4_Aluno.addActionListener(new java.awt.event.ActionListener() {
+        jButton2_RH1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jButton2_RH1.setText("RH");
+        jButton2_RH1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jButton2_RH1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4_AlunoActionPerformed(evt);
+                jButton2_RH1ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton2_RH1);
+        jButton2_RH1.setBounds(420, 90, 160, 84);
 
-        jButton3_Professor.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jButton3_Professor.setText("Professor");
-        jButton3_Professor.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jButton3_Professor.addActionListener(new java.awt.event.ActionListener() {
+        jButton4_Aluno1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jButton4_Aluno1.setText("Aluno");
+        jButton4_Aluno1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jButton4_Aluno1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3_ProfessorActionPerformed(evt);
+                jButton4_Aluno1ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton4_Aluno1);
+        jButton4_Aluno1.setBounds(110, 220, 145, 84);
 
-        jButton5_Coordenador.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jButton5_Coordenador.setText("Coordenador");
-        jButton5_Coordenador.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jButton5_Coordenador.addActionListener(new java.awt.event.ActionListener() {
+        jButton3_Professor1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jButton3_Professor1.setText("Professor");
+        jButton3_Professor1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jButton3_Professor1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5_CoordenadorActionPerformed(evt);
+                jButton3_Professor1ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton3_Professor1);
+        jButton3_Professor1.setBounds(420, 220, 160, 84);
+
+        jButton5_Coordenador1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jButton5_Coordenador1.setText("Coordenador");
+        jButton5_Coordenador1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jButton5_Coordenador1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5_Coordenador1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton5_Coordenador1);
+        jButton5_Coordenador1.setBounds(270, 360, 160, 84);
+
+        jLabel1_Fundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/apresentacao/graduation-hat-and-diploma-2.png"))); // NOI18N
+        jPanel1.add(jLabel1_Fundo);
+        jLabel1_Fundo.setBounds(70, 0, 620, 550);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1_Secretaria, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4_Aluno, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 107, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2_RH, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3_Professor, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(139, 139, 139)
-                .addComponent(jButton5_Coordenador, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 690, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1_Secretaria, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2_RH, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3_Professor, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4_Aluno, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addComponent(jButton5_Coordenador, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 550, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1_SecretariaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_SecretariaActionPerformed
+    private void jButton1_Secretaria1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_Secretaria1ActionPerformed
         // TODO add your handling code here:
         TelaPrincipalEscolhaSecretaria Tcad = new TelaPrincipalEscolhaSecretaria(oMain);
         Tcad.show();
+    }//GEN-LAST:event_jButton1_Secretaria1ActionPerformed
 
-    }//GEN-LAST:event_jButton1_SecretariaActionPerformed
-
-    private void jButton5_CoordenadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5_CoordenadorActionPerformed
+    private void jButton2_RH1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2_RH1ActionPerformed
         // TODO add your handling code here:
-        TelaCoordenador Tcad = new TelaCoordenador(oMain);
-        Tcad.show();
-    }//GEN-LAST:event_jButton5_CoordenadorActionPerformed
 
-    private void jButton2_RHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2_RHActionPerformed
-        // TODO add your handling code here:
-        
         TelaRH Tcad = new TelaRH(oMain);
         Tcad.show();
-    }//GEN-LAST:event_jButton2_RHActionPerformed
+    }//GEN-LAST:event_jButton2_RH1ActionPerformed
 
-    private void jButton4_AlunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4_AlunoActionPerformed
+    private void jButton4_Aluno1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4_Aluno1ActionPerformed
         // TODO add your handling code here:
         ConsultarAvaliaçãoAluno Tcad = new ConsultarAvaliaçãoAluno(oMain);
         Tcad.show();
-        
-    }//GEN-LAST:event_jButton4_AlunoActionPerformed
 
-    private void jButton3_ProfessorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3_ProfessorActionPerformed
+    }//GEN-LAST:event_jButton4_Aluno1ActionPerformed
+
+    private void jButton3_Professor1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3_Professor1ActionPerformed
         // TODO add your handling code here:]
         TelaProfessor Tcad = new TelaProfessor(oMain);
         Tcad.show();
-    }//GEN-LAST:event_jButton3_ProfessorActionPerformed
+    }//GEN-LAST:event_jButton3_Professor1ActionPerformed
+
+    private void jButton5_Coordenador1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5_Coordenador1ActionPerformed
+        // TODO add your handling code here:
+        TelaCoordenador Tcad = new TelaCoordenador(oMain);
+        Tcad.show();
+    }//GEN-LAST:event_jButton5_Coordenador1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -193,10 +188,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1_Secretaria;
-    private javax.swing.JButton jButton2_RH;
-    private javax.swing.JButton jButton3_Professor;
-    private javax.swing.JButton jButton4_Aluno;
-    private javax.swing.JButton jButton5_Coordenador;
+    private javax.swing.JButton jButton1_Secretaria1;
+    private javax.swing.JButton jButton2_RH1;
+    private javax.swing.JButton jButton3_Professor1;
+    private javax.swing.JButton jButton4_Aluno1;
+    private javax.swing.JButton jButton5_Coordenador1;
+    private javax.swing.JLabel jLabel1_Fundo;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

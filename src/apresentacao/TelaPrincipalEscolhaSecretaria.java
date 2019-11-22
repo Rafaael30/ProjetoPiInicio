@@ -65,7 +65,7 @@ public class TelaPrincipalEscolhaSecretaria extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1_Voltar);
-        jButton1_Voltar.setBounds(580, 570, 100, 23);
+        jButton1_Voltar.setBounds(560, 510, 100, 23);
 
         jButton1_CadastrarCurso.setBackground(new java.awt.Color(0, 0, 255));
         jButton1_CadastrarCurso.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
@@ -175,9 +175,7 @@ public class TelaPrincipalEscolhaSecretaria extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 607, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 549, Short.MAX_VALUE)
         );
 
         pack();
@@ -209,7 +207,7 @@ public class TelaPrincipalEscolhaSecretaria extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1_CadastrarAlunoActionPerformed
 
     private void jButton1_AbrirTurmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_AbrirTurmaActionPerformed
-        CadastrarDisciplinaSecretaria Tcad = new CadastrarDisciplinaSecretaria(oMain);
+        CadastrarTurmaSecretaria Tcad = new CadastrarTurmaSecretaria(oMain);
         Tcad.show();
     }//GEN-LAST:event_jButton1_AbrirTurmaActionPerformed
 

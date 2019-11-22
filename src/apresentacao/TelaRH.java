@@ -67,13 +67,13 @@ public class TelaRH extends javax.swing.JFrame {
         jTextField1_Endereço = new javax.swing.JTextField();
         jTextField1_Telefone = new javax.swing.JTextField();
         jTextField4_TitulacaoMaxima = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        jButton1_Salvar = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6_Cidade = new javax.swing.JLabel();
         jTextField1_Cidade = new javax.swing.JTextField();
         jLabel6_UF = new javax.swing.JLabel();
         jTextField1_UF = new javax.swing.JTextField();
-        jComboBox1_Cursos = new javax.swing.JComboBox<String>();
+        jComboBox1_Cursos = new javax.swing.JComboBox<>();
         jButton2_Alterar = new javax.swing.JButton();
         jLabel1_ID = new javax.swing.JLabel();
         jTextField1_ID = new javax.swing.JTextField();
@@ -120,11 +120,11 @@ public class TelaRH extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jButton1.setText("Salvar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButton1_Salvar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jButton1_Salvar.setText("Salvar");
+        jButton1_Salvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButton1_SalvarActionPerformed(evt);
             }
         });
 
@@ -137,8 +137,9 @@ public class TelaRH extends javax.swing.JFrame {
         jLabel6_UF.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel6_UF.setText("UF: ");
 
-        jComboBox1_Cursos.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1_Cursos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        jButton2_Alterar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jButton2_Alterar.setText("Alterar");
         jButton2_Alterar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -202,8 +203,7 @@ public class TelaRH extends javax.swing.JFrame {
                                         .addComponent(jTextField2_Nome, javax.swing.GroupLayout.Alignment.TRAILING))
                                     .addGroup(jPanel2Layout.createSequentialGroup()
                                         .addComponent(jTextField1_RG, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jButton1))))
+                                        .addGap(79, 79, 79))))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel2_Endereco)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -227,18 +227,21 @@ public class TelaRH extends javax.swing.JFrame {
                                 .addComponent(jComboBox1_Cursos, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addContainerGap())
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                                    .addComponent(jLabel3_Telefone)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jTextField1_Telefone, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel2Layout.createSequentialGroup()
-                                    .addComponent(jLabel6_Cidade)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jTextField1_UF, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jButton2_Alterar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel3_Telefone)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField1_Telefone, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel6_Cidade)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jTextField1_UF, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jButton2_Alterar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton1_Salvar, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(38, 38, 38))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -263,8 +266,7 @@ public class TelaRH extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField1_RG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1_Nome2)
-                    .addComponent(jButton1))
+                    .addComponent(jLabel1_Nome2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextField1_Endereço, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -288,7 +290,9 @@ public class TelaRH extends javax.swing.JFrame {
                     .addComponent(jLabel5)
                     .addComponent(jComboBox1_Cursos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton2_Alterar)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2_Alterar)
+                    .addComponent(jButton1_Salvar))
                 .addGap(40, 40, 40))
         );
 
@@ -328,7 +332,7 @@ public class TelaRH extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButton2_SairActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton1_SalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_SalvarActionPerformed
         // TODO add your handling code here: salvar
         
          try {
@@ -361,7 +365,7 @@ public class TelaRH extends javax.swing.JFrame {
         
         
         // Salvar asdasdasd
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jButton1_SalvarActionPerformed
 
     private void jTextField1_TelefoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1_TelefoneActionPerformed
         // TODO add your handling code here:
@@ -410,7 +414,7 @@ public class TelaRH extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton1_Salvar;
     private javax.swing.JButton jButton2_Alterar;
     private javax.swing.JButton jButton2_Sair;
     private javax.swing.JComboBox<String> jComboBox1_Cursos;

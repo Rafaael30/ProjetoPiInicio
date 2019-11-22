@@ -233,7 +233,7 @@ public class CadastrarDisciplinaSecretaria extends javax.swing.JFrame {
         });
 
         jLabel1_Titulo.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel1_Titulo.setText("Cadastro de Turmas");
+        jLabel1_Titulo.setText("Cadastro de Disciplinas");
 
         jLabel1_Fundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/apresentacao/graduation-hat-and-diploma-2.png"))); // NOI18N
 

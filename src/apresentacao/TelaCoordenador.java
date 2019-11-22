@@ -40,10 +40,13 @@ public class TelaCoordenador extends javax.swing.JFrame {
         jPanel1_PainelMaior = new javax.swing.JPanel();
         jPanel1_PainelMenor = new javax.swing.JPanel();
         jLabel1_Professor = new javax.swing.JLabel();
-        jComboBox1_NomeProfessor = new javax.swing.JComboBox<String>();
+        jComboBox1_NomeProfessor = new javax.swing.JComboBox<>();
         jLabel1_Turma = new javax.swing.JLabel();
-        jComboBox1_Turmas = new javax.swing.JComboBox<String>();
+        jComboBox1_Turmas = new javax.swing.JComboBox<>();
         jButton1_Salvar = new javax.swing.JButton();
+        jButton1_Alterar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jComboBox1_Disciplinas = new javax.swing.JComboBox<>();
         jLabel1_Titulo = new javax.swing.JLabel();
         jButton2_Sair = new javax.swing.JButton();
         jLabel1_Fundo = new javax.swing.JLabel();
@@ -62,16 +65,25 @@ public class TelaCoordenador extends javax.swing.JFrame {
         jLabel1_Professor.setText("Professor:");
 
         jComboBox1_NomeProfessor.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jComboBox1_NomeProfessor.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1_NomeProfessor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel1_Turma.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel1_Turma.setText("Turma:");
 
         jComboBox1_Turmas.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jComboBox1_Turmas.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1_Turmas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jButton1_Salvar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jButton1_Salvar.setText("Salvar");
+
+        jButton1_Alterar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jButton1_Alterar.setText("Alterar");
+
+        jLabel1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel1.setText("Disciplina: ");
+
+        jComboBox1_Disciplinas.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jComboBox1_Disciplinas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         javax.swing.GroupLayout jPanel1_PainelMenorLayout = new javax.swing.GroupLayout(jPanel1_PainelMenor);
         jPanel1_PainelMenor.setLayout(jPanel1_PainelMenorLayout);
@@ -79,18 +91,28 @@ public class TelaCoordenador extends javax.swing.JFrame {
             jPanel1_PainelMenorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1_PainelMenorLayout.createSequentialGroup()
                 .addGroup(jPanel1_PainelMenorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jComboBox1_Disciplinas, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1_PainelMenorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1_PainelMenorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(jPanel1_PainelMenorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel1_PainelMenorLayout.createSequentialGroup()
+                                    .addContainerGap()
+                                    .addComponent(jLabel1_Professor, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel1_PainelMenorLayout.createSequentialGroup()
+                                    .addGap(62, 62, 62)
+                                    .addComponent(jComboBox1_NomeProfessor, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel1_PainelMenorLayout.createSequentialGroup()
+                                    .addContainerGap()
+                                    .addComponent(jLabel1_Turma, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jComboBox1_Turmas, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1_PainelMenorLayout.createSequentialGroup()
+                                .addGap(20, 20, 20)
+                                .addComponent(jButton1_Alterar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton1_Salvar, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGroup(jPanel1_PainelMenorLayout.createSequentialGroup()
                             .addContainerGap()
-                            .addComponent(jLabel1_Professor, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel1_PainelMenorLayout.createSequentialGroup()
-                            .addGap(62, 62, 62)
-                            .addComponent(jComboBox1_NomeProfessor, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel1_PainelMenorLayout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(jLabel1_Turma, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jComboBox1_Turmas, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1_Salvar, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel1))))
                 .addContainerGap(16, Short.MAX_VALUE))
         );
         jPanel1_PainelMenorLayout.setVerticalGroup(
@@ -100,12 +122,18 @@ public class TelaCoordenador extends javax.swing.JFrame {
                 .addComponent(jLabel1_Professor)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jComboBox1_NomeProfessor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel1_Turma)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jComboBox1_Turmas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
-                .addComponent(jButton1_Salvar)
+                .addGap(19, 19, 19)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jComboBox1_Disciplinas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                .addGroup(jPanel1_PainelMenorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1_Salvar)
+                    .addComponent(jButton1_Alterar))
                 .addGap(30, 30, 30))
         );
 
@@ -186,10 +214,13 @@ public class TelaCoordenador extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1_Alterar;
     private javax.swing.JButton jButton1_Salvar;
     private javax.swing.JButton jButton2_Sair;
+    private javax.swing.JComboBox<String> jComboBox1_Disciplinas;
     private javax.swing.JComboBox<String> jComboBox1_NomeProfessor;
     private javax.swing.JComboBox<String> jComboBox1_Turmas;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel1_Fundo;
     private javax.swing.JLabel jLabel1_Professor;
     private javax.swing.JLabel jLabel1_Titulo;

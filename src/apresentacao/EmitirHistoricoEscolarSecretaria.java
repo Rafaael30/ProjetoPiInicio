@@ -41,9 +41,9 @@ public class EmitirHistoricoEscolarSecretaria extends javax.swing.JFrame {
         jLabel1_ID = new javax.swing.JLabel();
         jTextField1_IdAluno = new javax.swing.JTextField();
         jLabel2_Curso = new javax.swing.JLabel();
-        jComboBox1_Cursos = new javax.swing.JComboBox<String>();
+        jComboBox1_Cursos = new javax.swing.JComboBox<>();
         jLabel3_Disciplina = new javax.swing.JLabel();
-        jComboBox1_Disciplinas = new javax.swing.JComboBox<String>();
+        jComboBox1_Disciplinas = new javax.swing.JComboBox<>();
         jLabel4_NF = new javax.swing.JLabel();
         jLabel5_Frequencia = new javax.swing.JLabel();
         jLabel6_Status = new javax.swing.JLabel();
@@ -56,6 +56,7 @@ public class EmitirHistoricoEscolarSecretaria extends javax.swing.JFrame {
         jTextArea1_NotaFinal = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea2_Frequencia = new javax.swing.JTextArea();
+        jButton1_Pesquisar = new javax.swing.JButton();
         jLabel1_Titulo = new javax.swing.JLabel();
         jButton1_Sair = new javax.swing.JButton();
         jLabel1_Fundo = new javax.swing.JLabel();
@@ -84,7 +85,7 @@ public class EmitirHistoricoEscolarSecretaria extends javax.swing.JFrame {
         jLabel2_Curso.setBounds(11, 50, 46, 17);
 
         jComboBox1_Cursos.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jComboBox1_Cursos.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1_Cursos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jPanel2.add(jComboBox1_Cursos);
         jComboBox1_Cursos.setBounds(39, 73, 212, 21);
 
@@ -94,7 +95,7 @@ public class EmitirHistoricoEscolarSecretaria extends javax.swing.JFrame {
         jLabel3_Disciplina.setBounds(11, 159, 68, 17);
 
         jComboBox1_Disciplinas.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jComboBox1_Disciplinas.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1_Disciplinas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jPanel2.add(jComboBox1_Disciplinas);
         jComboBox1_Disciplinas.setBounds(39, 187, 212, 21);
 
@@ -155,6 +156,11 @@ public class EmitirHistoricoEscolarSecretaria extends javax.swing.JFrame {
 
         jPanel2.add(jScrollPane2);
         jScrollPane2.setBounds(120, 330, 166, 70);
+
+        jButton1_Pesquisar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jButton1_Pesquisar.setText("Pesquisar");
+        jPanel2.add(jButton1_Pesquisar);
+        jButton1_Pesquisar.setBounds(160, 30, 100, 25);
 
         jPanel1.add(jPanel2);
         jPanel2.setBounds(190, 90, 290, 410);
@@ -235,6 +241,7 @@ public class EmitirHistoricoEscolarSecretaria extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1_Emissao;
+    private javax.swing.JButton jButton1_Pesquisar;
     private javax.swing.JButton jButton1_Sair;
     private javax.swing.JComboBox<String> jComboBox1_Cursos;
     private javax.swing.JComboBox<String> jComboBox1_Disciplinas;

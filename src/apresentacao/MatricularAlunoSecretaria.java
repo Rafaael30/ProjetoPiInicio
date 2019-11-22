@@ -39,9 +39,9 @@ public class MatricularAlunoSecretaria extends javax.swing.JFrame {
         jLabel1_Titulo = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1_Aluno = new javax.swing.JLabel();
-        jComboBox1_NomeAluno = new javax.swing.JComboBox<String>();
+        jComboBox1_NomeAluno = new javax.swing.JComboBox<>();
         jLabel1_Turma = new javax.swing.JLabel();
-        jComboBox1_Turmas = new javax.swing.JComboBox<String>();
+        jComboBox1_Turmas = new javax.swing.JComboBox<>();
         jButton1_Salvar = new javax.swing.JButton();
         jButton1_Sair = new javax.swing.JButton();
         jLabel1_Fundo = new javax.swing.JLabel();
@@ -65,13 +65,13 @@ public class MatricularAlunoSecretaria extends javax.swing.JFrame {
         jLabel1_Aluno.setText("Aluno:");
 
         jComboBox1_NomeAluno.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
-        jComboBox1_NomeAluno.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1_NomeAluno.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel1_Turma.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel1_Turma.setText("Turma:");
 
         jComboBox1_Turmas.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
-        jComboBox1_Turmas.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1_Turmas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jButton1_Salvar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jButton1_Salvar.setText("Salvar");
@@ -95,10 +95,10 @@ public class MatricularAlunoSecretaria extends javax.swing.JFrame {
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(22, 22, 22)
-                        .addComponent(jComboBox1_Turmas, 0, 216, Short.MAX_VALUE)))
+                        .addComponent(jComboBox1_Turmas, 0, 236, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(39, 39, 39)
+                .addGap(41, 41, 41)
                 .addComponent(jButton1_Salvar, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -113,13 +113,13 @@ public class MatricularAlunoSecretaria extends javax.swing.JFrame {
                 .addComponent(jLabel1_Turma)
                 .addGap(18, 18, 18)
                 .addComponent(jComboBox1_Turmas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(104, 104, 104)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 98, Short.MAX_VALUE)
                 .addComponent(jButton1_Salvar)
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addGap(39, 39, 39))
         );
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(230, 110, 250, 320);
+        jPanel2.setBounds(230, 110, 270, 320);
 
         jButton1_Sair.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jButton1_Sair.setText("Sair");

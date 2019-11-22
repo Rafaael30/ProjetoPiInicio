@@ -42,7 +42,7 @@ public class TelaProfessor extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel2_Titulo = new javax.swing.JLabel();
         jPanel2_PainelMenor = new javax.swing.JPanel();
-        jComboBox1_Alunos = new javax.swing.JComboBox<String>();
+        jComboBox1_Alunos = new javax.swing.JComboBox<>();
         jLabel1_Aluno = new javax.swing.JLabel();
         jLabel1_Nota1 = new javax.swing.JLabel();
         jLabel2_Nota2 = new javax.swing.JLabel();
@@ -72,104 +72,60 @@ public class TelaProfessor extends javax.swing.JFrame {
 
         jPanel2_PainelMenor.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2_PainelMenor.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel2_PainelMenor.setLayout(null);
 
         jComboBox1_Alunos.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jComboBox1_Alunos.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1_Alunos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel2_PainelMenor.add(jComboBox1_Alunos);
+        jComboBox1_Alunos.setBounds(60, 40, 290, 21);
 
         jLabel1_Aluno.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel1_Aluno.setText("Aluno:");
+        jPanel2_PainelMenor.add(jLabel1_Aluno);
+        jLabel1_Aluno.setBounds(10, 40, 50, 14);
 
         jLabel1_Nota1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel1_Nota1.setText("Nota 1:");
+        jPanel2_PainelMenor.add(jLabel1_Nota1);
+        jLabel1_Nota1.setBounds(20, 90, 50, 15);
 
         jLabel2_Nota2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel2_Nota2.setText("Nota 2:");
+        jPanel2_PainelMenor.add(jLabel2_Nota2);
+        jLabel2_Nota2.setBounds(20, 120, 40, 15);
 
         jLabel3_NotaProvaFinal.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel3_NotaProvaFinal.setText("Nota Prova Final:");
+        jPanel2_PainelMenor.add(jLabel3_NotaProvaFinal);
+        jLabel3_NotaProvaFinal.setBounds(20, 150, 110, 15);
 
         jLabel4_Frequencia.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel4_Frequencia.setText("Frequencia:");
+        jPanel2_PainelMenor.add(jLabel4_Frequencia);
+        jLabel4_Frequencia.setBounds(20, 180, 70, 15);
 
-        jButton1_Salvar.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jButton1_Salvar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jButton1_Salvar.setText("Salvar");
         jButton1_Salvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1_SalvarActionPerformed(evt);
             }
         });
+        jPanel2_PainelMenor.add(jButton1_Salvar);
+        jButton1_Salvar.setBounds(227, 225, 110, 30);
+        jPanel2_PainelMenor.add(jTextField1_Nota1);
+        jTextField1_Nota1.setBounds(150, 90, 59, 20);
+        jPanel2_PainelMenor.add(jTextField2_Nota2);
+        jTextField2_Nota2.setBounds(150, 120, 59, 20);
+        jPanel2_PainelMenor.add(jTextField3_NotaProvaFinal);
+        jTextField3_NotaProvaFinal.setBounds(150, 150, 59, 20);
+        jPanel2_PainelMenor.add(jTextField4_Frequencia);
+        jTextField4_Frequencia.setBounds(150, 180, 59, 20);
 
         jButton1_Alterar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jButton1_Alterar.setText("Alterar");
-
-        javax.swing.GroupLayout jPanel2_PainelMenorLayout = new javax.swing.GroupLayout(jPanel2_PainelMenor);
-        jPanel2_PainelMenor.setLayout(jPanel2_PainelMenorLayout);
-        jPanel2_PainelMenorLayout.setHorizontalGroup(
-            jPanel2_PainelMenorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2_PainelMenorLayout.createSequentialGroup()
-                .addGroup(jPanel2_PainelMenorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2_PainelMenorLayout.createSequentialGroup()
-                        .addGap(9, 9, 9)
-                        .addGroup(jPanel2_PainelMenorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(jPanel2_PainelMenorLayout.createSequentialGroup()
-                                .addComponent(jLabel4_Frequencia, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(60, 60, 60)
-                                .addComponent(jTextField4_Frequencia, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(40, 40, 40))
-                            .addGroup(jPanel2_PainelMenorLayout.createSequentialGroup()
-                                .addComponent(jLabel1_Aluno, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(jComboBox1_Alunos, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanel2_PainelMenorLayout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addGroup(jPanel2_PainelMenorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton1_Alterar, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel2_PainelMenorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel2_PainelMenorLayout.createSequentialGroup()
-                                    .addComponent(jLabel1_Nota1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(80, 80, 80)
-                                    .addComponent(jTextField1_Nota1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel2_PainelMenorLayout.createSequentialGroup()
-                                    .addComponent(jLabel2_Nota2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(90, 90, 90)
-                                    .addComponent(jTextField2_Nota2, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel2_PainelMenorLayout.createSequentialGroup()
-                                    .addComponent(jLabel3_NotaProvaFinal, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(20, 20, 20)
-                                    .addComponent(jTextField3_NotaProvaFinal, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton1_Salvar, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
-        );
-        jPanel2_PainelMenorLayout.setVerticalGroup(
-            jPanel2_PainelMenorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2_PainelMenorLayout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addGroup(jPanel2_PainelMenorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1_Aluno, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox1_Alunos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
-                .addGroup(jPanel2_PainelMenorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1_Nota1)
-                    .addComponent(jTextField1_Nota1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(jPanel2_PainelMenorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2_Nota2)
-                    .addComponent(jTextField2_Nota2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(jPanel2_PainelMenorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3_NotaProvaFinal)
-                    .addComponent(jTextField3_NotaProvaFinal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addGroup(jPanel2_PainelMenorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4_Frequencia)
-                    .addComponent(jTextField4_Frequencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31)
-                .addGroup(jPanel2_PainelMenorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1_Alterar)
-                    .addComponent(jButton1_Salvar))
-                .addGap(18, 18, 18))
-        );
+        jPanel2_PainelMenor.add(jButton1_Alterar);
+        jButton1_Alterar.setBounds(30, 225, 101, 30);
 
         jPanel1.add(jPanel2_PainelMenor);
         jPanel2_PainelMenor.setBounds(170, 70, 360, 300);
