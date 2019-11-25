@@ -49,11 +49,11 @@ public class TelaProfessor extends javax.swing.JFrame {
         jLabel3_NotaProvaFinal = new javax.swing.JLabel();
         jLabel4_Frequencia = new javax.swing.JLabel();
         jButton1_Salvar = new javax.swing.JButton();
-        jTextField1_Nota1 = new javax.swing.JTextField();
-        jTextField2_Nota2 = new javax.swing.JTextField();
-        jTextField3_NotaProvaFinal = new javax.swing.JTextField();
         jTextField4_Frequencia = new javax.swing.JTextField();
         jButton1_Alterar = new javax.swing.JButton();
+        jTextField1_Nota1 = new javax.swing.JFormattedTextField();
+        jTextField2_Nota2 = new javax.swing.JFormattedTextField();
+        jTextField3_NotaProvaFinal = new javax.swing.JFormattedTextField();
         jButton1_Sair = new javax.swing.JButton();
         jLabel1_Fundo = new javax.swing.JLabel();
 
@@ -113,12 +113,6 @@ public class TelaProfessor extends javax.swing.JFrame {
         });
         jPanel2_PainelMenor.add(jButton1_Salvar);
         jButton1_Salvar.setBounds(227, 225, 110, 30);
-        jPanel2_PainelMenor.add(jTextField1_Nota1);
-        jTextField1_Nota1.setBounds(150, 90, 59, 20);
-        jPanel2_PainelMenor.add(jTextField2_Nota2);
-        jTextField2_Nota2.setBounds(150, 120, 59, 20);
-        jPanel2_PainelMenor.add(jTextField3_NotaProvaFinal);
-        jTextField3_NotaProvaFinal.setBounds(150, 150, 59, 20);
         jPanel2_PainelMenor.add(jTextField4_Frequencia);
         jTextField4_Frequencia.setBounds(150, 180, 59, 20);
 
@@ -126,6 +120,30 @@ public class TelaProfessor extends javax.swing.JFrame {
         jButton1_Alterar.setText("Alterar");
         jPanel2_PainelMenor.add(jButton1_Alterar);
         jButton1_Alterar.setBounds(30, 225, 101, 30);
+
+        try {
+            jTextField1_Nota1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##,#")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        jPanel2_PainelMenor.add(jTextField1_Nota1);
+        jTextField1_Nota1.setBounds(150, 90, 60, 20);
+
+        try {
+            jTextField2_Nota2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##,#")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        jPanel2_PainelMenor.add(jTextField2_Nota2);
+        jTextField2_Nota2.setBounds(150, 120, 60, 20);
+
+        try {
+            jTextField3_NotaProvaFinal.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##,#")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        jPanel2_PainelMenor.add(jTextField3_NotaProvaFinal);
+        jTextField3_NotaProvaFinal.setBounds(150, 150, 60, 20);
 
         jPanel1.add(jPanel2_PainelMenor);
         jPanel2_PainelMenor.setBounds(170, 70, 360, 300);
@@ -216,9 +234,9 @@ public class TelaProfessor extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4_Frequencia;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2_PainelMenor;
-    private javax.swing.JTextField jTextField1_Nota1;
-    private javax.swing.JTextField jTextField2_Nota2;
-    private javax.swing.JTextField jTextField3_NotaProvaFinal;
+    private javax.swing.JFormattedTextField jTextField1_Nota1;
+    private javax.swing.JFormattedTextField jTextField2_Nota2;
+    private javax.swing.JFormattedTextField jTextField3_NotaProvaFinal;
     private javax.swing.JTextField jTextField4_Frequencia;
     // End of variables declaration//GEN-END:variables
 }

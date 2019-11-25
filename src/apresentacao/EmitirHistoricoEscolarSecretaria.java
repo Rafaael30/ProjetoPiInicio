@@ -39,7 +39,6 @@ public class EmitirHistoricoEscolarSecretaria extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1_ID = new javax.swing.JLabel();
-        jTextField1_IdAluno = new javax.swing.JTextField();
         jLabel2_Curso = new javax.swing.JLabel();
         jComboBox1_Cursos = new javax.swing.JComboBox<>();
         jLabel3_Disciplina = new javax.swing.JLabel();
@@ -57,6 +56,7 @@ public class EmitirHistoricoEscolarSecretaria extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea2_Frequencia = new javax.swing.JTextArea();
         jButton1_Pesquisar = new javax.swing.JButton();
+        jTextField1_IdAluno = new javax.swing.JFormattedTextField();
         jLabel1_Titulo = new javax.swing.JLabel();
         jButton1_Sair = new javax.swing.JButton();
         jLabel1_Fundo = new javax.swing.JLabel();
@@ -76,8 +76,6 @@ public class EmitirHistoricoEscolarSecretaria extends javax.swing.JFrame {
         jLabel1_ID.setText("ID Aluno:");
         jPanel2.add(jLabel1_ID);
         jLabel1_ID.setBounds(11, 13, 61, 17);
-        jPanel2.add(jTextField1_IdAluno);
-        jTextField1_IdAluno.setBounds(90, 12, 50, 20);
 
         jLabel2_Curso.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel2_Curso.setText("Curso: ");
@@ -161,6 +159,14 @@ public class EmitirHistoricoEscolarSecretaria extends javax.swing.JFrame {
         jButton1_Pesquisar.setText("Pesquisar");
         jPanel2.add(jButton1_Pesquisar);
         jButton1_Pesquisar.setBounds(160, 30, 100, 25);
+
+        try {
+            jTextField1_IdAluno.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("######")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        jPanel2.add(jTextField1_IdAluno);
+        jTextField1_IdAluno.setBounds(80, 10, 70, 20);
 
         jPanel1.add(jPanel2);
         jPanel2.setBounds(190, 90, 290, 410);
@@ -263,6 +269,6 @@ public class EmitirHistoricoEscolarSecretaria extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1_NotaFinal;
     private javax.swing.JTextArea jTextArea2_Frequencia;
-    private javax.swing.JTextField jTextField1_IdAluno;
+    private javax.swing.JFormattedTextField jTextField1_IdAluno;
     // End of variables declaration//GEN-END:variables
 }

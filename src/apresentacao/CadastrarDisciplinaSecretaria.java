@@ -43,24 +43,24 @@ public class CadastrarDisciplinaSecretaria extends javax.swing.JFrame {
         jLabel3_Semestre = new javax.swing.JLabel();
         jLabel4_Dias = new javax.swing.JLabel();
         jLabel5_Horarios = new javax.swing.JLabel();
-        jTextField1_Ano = new javax.swing.JTextField();
-        jTextField2_Semestre = new javax.swing.JTextField();
         jRadioButton1_Segunda = new javax.swing.JRadioButton();
         jRadioButton2_Terça = new javax.swing.JRadioButton();
         jRadioButton3_Quarta = new javax.swing.JRadioButton();
         jRadioButton4_Quinta = new javax.swing.JRadioButton();
         jRadioButton5_Sexta = new javax.swing.JRadioButton();
-        jTextField3_HorarioComeco1 = new javax.swing.JTextField();
-        jTextField4_HorarioComeco2 = new javax.swing.JTextField();
-        jTextField5_HorarioTermino1 = new javax.swing.JTextField();
-        jTextField6_HorarioTermino2 = new javax.swing.JTextField();
         jButton1_Salvar = new javax.swing.JButton();
         jLabel1_ID = new javax.swing.JLabel();
-        jTextField1_ID = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jButton1_Alterar = new javax.swing.JButton();
+        jTextField1_ID = new javax.swing.JFormattedTextField();
+        jTextField1_Ano = new javax.swing.JFormattedTextField();
+        jTextField2_Semestre = new javax.swing.JFormattedTextField();
+        jTextField3_HorarioComeco1 = new javax.swing.JFormattedTextField();
+        jTextField5_HorarioTermino1 = new javax.swing.JFormattedTextField();
+        jTextField4_HorarioComeco2 = new javax.swing.JFormattedTextField();
+        jTextField6_HorarioTermino2 = new javax.swing.JFormattedTextField();
         jButton2_Sair = new javax.swing.JButton();
         jLabel1_Titulo = new javax.swing.JLabel();
         jLabel1_Fundo = new javax.swing.JLabel();
@@ -74,155 +74,135 @@ public class CadastrarDisciplinaSecretaria extends javax.swing.JFrame {
 
         jPanel2_PainelMenor.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2_PainelMenor.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel2_PainelMenor.setLayout(null);
 
         jLabel2_Ano.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel2_Ano.setText("Ano:");
+        jPanel2_PainelMenor.add(jLabel2_Ano);
+        jLabel2_Ano.setBounds(11, 71, 31, 17);
 
         jLabel3_Semestre.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel3_Semestre.setText("Semestre: ");
+        jPanel2_PainelMenor.add(jLabel3_Semestre);
+        jLabel3_Semestre.setBounds(11, 102, 68, 17);
 
         jLabel4_Dias.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel4_Dias.setText("Dias da Semana: ");
+        jPanel2_PainelMenor.add(jLabel4_Dias);
+        jLabel4_Dias.setBounds(11, 132, 112, 17);
 
         jLabel5_Horarios.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel5_Horarios.setText("Horários de Realização: ");
+        jPanel2_PainelMenor.add(jLabel5_Horarios);
+        jLabel5_Horarios.setBounds(11, 212, 154, 17);
 
         jRadioButton1_Segunda.setText("Segunda-Feira");
+        jPanel2_PainelMenor.add(jRadioButton1_Segunda);
+        jRadioButton1_Segunda.setBounds(11, 156, 95, 14);
 
         jRadioButton2_Terça.setText("Terça-Feira");
+        jPanel2_PainelMenor.add(jRadioButton2_Terça);
+        jRadioButton2_Terça.setBounds(106, 156, 81, 14);
 
         jRadioButton3_Quarta.setText("Quarta-Feira");
+        jPanel2_PainelMenor.add(jRadioButton3_Quarta);
+        jRadioButton3_Quarta.setBounds(187, 156, 87, 14);
 
         jRadioButton4_Quinta.setText("Quinta-Feira");
+        jPanel2_PainelMenor.add(jRadioButton4_Quinta);
+        jRadioButton4_Quinta.setBounds(11, 176, 85, 14);
 
         jRadioButton5_Sexta.setText("Sexta-Feira");
+        jPanel2_PainelMenor.add(jRadioButton5_Sexta);
+        jRadioButton5_Sexta.setBounds(106, 176, 81, 14);
 
         jButton1_Salvar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jButton1_Salvar.setText("Salvar");
+        jPanel2_PainelMenor.add(jButton1_Salvar);
+        jButton1_Salvar.setBounds(180, 280, 105, 25);
 
         jLabel1_ID.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel1_ID.setText("ID: ");
+        jPanel2_PainelMenor.add(jLabel1_ID);
+        jLabel1_ID.setBounds(187, 13, 21, 17);
 
         jLabel1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel1.setText("Status: ");
+        jPanel2_PainelMenor.add(jLabel1);
+        jLabel1.setBounds(11, 13, 48, 17);
 
         buttonGroup1.add(jRadioButton1);
         jRadioButton1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jRadioButton1.setText("Ativo");
+        jPanel2_PainelMenor.add(jRadioButton1);
+        jRadioButton1.setBounds(11, 34, 51, 18);
 
         buttonGroup1.add(jRadioButton2);
         jRadioButton2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jRadioButton2.setText("Inativo");
+        jPanel2_PainelMenor.add(jRadioButton2);
+        jRadioButton2.setBounds(80, 34, 61, 18);
 
         jButton1_Alterar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jButton1_Alterar.setText("Alterar");
+        jPanel2_PainelMenor.add(jButton1_Alterar);
+        jButton1_Alterar.setBounds(19, 280, 88, 25);
 
-        javax.swing.GroupLayout jPanel2_PainelMenorLayout = new javax.swing.GroupLayout(jPanel2_PainelMenor);
-        jPanel2_PainelMenor.setLayout(jPanel2_PainelMenorLayout);
-        jPanel2_PainelMenorLayout.setHorizontalGroup(
-            jPanel2_PainelMenorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2_PainelMenorLayout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addGroup(jPanel2_PainelMenorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(jPanel2_PainelMenorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel2_PainelMenorLayout.createSequentialGroup()
-                            .addComponent(jRadioButton1)
-                            .addGap(18, 18, 18)
-                            .addComponent(jRadioButton2))
-                        .addComponent(jLabel4_Dias)
-                        .addGroup(jPanel2_PainelMenorLayout.createSequentialGroup()
-                            .addComponent(jRadioButton4_Quinta)
-                            .addGap(10, 10, 10)
-                            .addComponent(jRadioButton5_Sexta))
-                        .addGroup(jPanel2_PainelMenorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel2_PainelMenorLayout.createSequentialGroup()
-                                .addComponent(jTextField4_HorarioComeco2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jTextField6_HorarioTermino2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2_PainelMenorLayout.createSequentialGroup()
-                                .addComponent(jLabel5_Horarios)
-                                .addGap(4, 4, 4)
-                                .addComponent(jTextField3_HorarioComeco1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jTextField5_HorarioTermino1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(jPanel2_PainelMenorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(jPanel2_PainelMenorLayout.createSequentialGroup()
-                                .addComponent(jLabel2_Ano, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(54, 54, 54)
-                                .addComponent(jTextField1_Ano, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2_PainelMenorLayout.createSequentialGroup()
-                                .addComponent(jLabel3_Semestre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jTextField2_Semestre, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(jPanel2_PainelMenorLayout.createSequentialGroup()
-                            .addGroup(jPanel2_PainelMenorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel2_PainelMenorLayout.createSequentialGroup()
-                                    .addComponent(jRadioButton1_Segunda)
-                                    .addGap(0, 0, 0)
-                                    .addComponent(jRadioButton2_Terça))
-                                .addComponent(jLabel1))
-                            .addGroup(jPanel2_PainelMenorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel2_PainelMenorLayout.createSequentialGroup()
-                                    .addComponent(jLabel1_ID)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jTextField1_ID, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(jRadioButton3_Quarta))))
-                    .addGroup(jPanel2_PainelMenorLayout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(jButton1_Alterar, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1_Salvar, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(22, 22, 22)))
-                .addContainerGap())
-        );
-        jPanel2_PainelMenorLayout.setVerticalGroup(
-            jPanel2_PainelMenorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2_PainelMenorLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel2_PainelMenorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1_ID)
-                    .addComponent(jTextField1_ID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2_PainelMenorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jRadioButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2_PainelMenorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2_Ano)
-                    .addComponent(jTextField1_Ano, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2_PainelMenorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField2_Semestre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3_Semestre))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel4_Dias)
-                .addGap(7, 7, 7)
-                .addGroup(jPanel2_PainelMenorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton1_Segunda, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jRadioButton2_Terça, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jRadioButton3_Quarta, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(6, 6, 6)
-                .addGroup(jPanel2_PainelMenorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton4_Quinta, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jRadioButton5_Sexta, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(19, 19, 19)
-                .addGroup(jPanel2_PainelMenorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2_PainelMenorLayout.createSequentialGroup()
-                        .addGap(3, 3, 3)
-                        .addComponent(jLabel5_Horarios))
-                    .addComponent(jTextField3_HorarioComeco1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField5_HorarioTermino1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(6, 6, 6)
-                .addGroup(jPanel2_PainelMenorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField4_HorarioComeco2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField6_HorarioTermino2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
-                .addGroup(jPanel2_PainelMenorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1_Salvar)
-                    .addComponent(jButton1_Alterar))
-                .addGap(24, 24, 24))
-        );
+        try {
+            jTextField1_ID.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        jPanel2_PainelMenor.add(jTextField1_ID);
+        jTextField1_ID.setBounds(212, 12, 70, 20);
+
+        try {
+            jTextField1_Ano.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        jPanel2_PainelMenor.add(jTextField1_Ano);
+        jTextField1_Ano.setBounds(90, 70, 70, 20);
+
+        try {
+            jTextField2_Semestre.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("#º")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        jPanel2_PainelMenor.add(jTextField2_Semestre);
+        jTextField2_Semestre.setBounds(90, 100, 70, 20);
+
+        try {
+            jTextField3_HorarioComeco1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        jPanel2_PainelMenor.add(jTextField3_HorarioComeco1);
+        jTextField3_HorarioComeco1.setBounds(170, 210, 50, 20);
+
+        try {
+            jTextField5_HorarioTermino1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        jPanel2_PainelMenor.add(jTextField5_HorarioTermino1);
+        jTextField5_HorarioTermino1.setBounds(230, 210, 50, 20);
+
+        try {
+            jTextField4_HorarioComeco2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        jPanel2_PainelMenor.add(jTextField4_HorarioComeco2);
+        jTextField4_HorarioComeco2.setBounds(170, 240, 50, 20);
+
+        try {
+            jTextField6_HorarioTermino2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        jPanel2_PainelMenor.add(jTextField6_HorarioTermino2);
+        jTextField6_HorarioTermino2.setBounds(230, 240, 50, 20);
 
         jButton2_Sair.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jButton2_Sair.setText("Sair");
@@ -259,9 +239,8 @@ public class CadastrarDisciplinaSecretaria extends javax.swing.JFrame {
             .addComponent(jLabel1_Titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(jPanel1_PainelMaiorLayout.createSequentialGroup()
                 .addGap(80, 80, 80)
-                .addComponent(jPanel2_PainelMenor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel1_PainelMaiorLayout.createSequentialGroup()
-                .addGap(500, 500, 500)
+                .addComponent(jPanel2_PainelMenor, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(88, 88, 88)
                 .addComponent(jButton2_Sair, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addComponent(jLabel1_Fundo, javax.swing.GroupLayout.PREFERRED_SIZE, 550, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
@@ -336,12 +315,12 @@ public class CadastrarDisciplinaSecretaria extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton3_Quarta;
     private javax.swing.JRadioButton jRadioButton4_Quinta;
     private javax.swing.JRadioButton jRadioButton5_Sexta;
-    private javax.swing.JTextField jTextField1_Ano;
-    private javax.swing.JTextField jTextField1_ID;
-    private javax.swing.JTextField jTextField2_Semestre;
-    private javax.swing.JTextField jTextField3_HorarioComeco1;
-    private javax.swing.JTextField jTextField4_HorarioComeco2;
-    private javax.swing.JTextField jTextField5_HorarioTermino1;
-    private javax.swing.JTextField jTextField6_HorarioTermino2;
+    private javax.swing.JFormattedTextField jTextField1_Ano;
+    private javax.swing.JFormattedTextField jTextField1_ID;
+    private javax.swing.JFormattedTextField jTextField2_Semestre;
+    private javax.swing.JFormattedTextField jTextField3_HorarioComeco1;
+    private javax.swing.JFormattedTextField jTextField4_HorarioComeco2;
+    private javax.swing.JFormattedTextField jTextField5_HorarioTermino1;
+    private javax.swing.JFormattedTextField jTextField6_HorarioTermino2;
     // End of variables declaration//GEN-END:variables
 }
